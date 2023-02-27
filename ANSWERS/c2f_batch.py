@@ -1,8 +1,10 @@
 import sys
 
-celsius = float(sys.argv[1])
+for raw_value in sys.argv[1:]:
 
-fahrenheit = ((9 * celsius) / 5) + 32
+    celsius = float(raw_value)
 
-print("{:.1f} C is {:.1f} F".format(celsius, fahrenheit))
+    fahrenheit = ((9 * celsius) / 5) + 32
+
+    print("{:.1f} C is {:.1f} F".format(celsius, fahrenheit))
 
