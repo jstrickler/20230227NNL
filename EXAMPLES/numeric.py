@@ -1,7 +1,7 @@
 
-a = 5
+a = 5   # int
 b = 10
-c = 20.22
+c = 20.22   # float
 d = 0o123        # Octal
 e = 0xdeadbeef   # Hex
 f = 0b10011101   # Binary 
