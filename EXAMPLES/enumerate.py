@@ -11,3 +11,7 @@ print()
 
 for num, month in enumerate(months, 1):  # Second parameter to enumerate is added to index
     print("{} {}".format(num, month))
+
+
+e = enumerate(colors)
+print(f"e: {e}")

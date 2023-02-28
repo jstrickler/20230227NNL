@@ -9,7 +9,10 @@ months = (
 print("yellow in colors: ", ("yellow" in colors))  # Test for membership in list
 print("pink in colors: ", ("pink" in colors))
 
-print("colors: ", ",".join(colors))  # Concatenate iterable using ", " as delimiter
+print(
+    "colors: ",
+    ".".join(colors)
+)  # Concatenate iterable using ", " as delimiter
 
 del colors[4]  # remove brown
 
@@ -26,3 +29,10 @@ print("sum of lists:", sum_of_lists)
 product = [True] * 5  # Multiply a list; replicates elements
 
 print("product of lists:", product)
+
+zeroes = [0] * 25
+print(f"zeroes: {zeroes}")
+
+print('-' * 60)
+print(f"'Python rocks! ' * 10: {'Python rocks! ' * 10}")
+
