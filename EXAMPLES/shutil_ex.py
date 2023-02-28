@@ -17,3 +17,4 @@ shutil.move('fred.txt', new_folder)
 shutil.rmtree(new_folder) # recursively remove folder
 
 print("{} exists:".format(new_folder), os.path.exists(new_folder))
+
