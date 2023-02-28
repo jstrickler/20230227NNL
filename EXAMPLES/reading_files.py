@@ -1,3 +1,4 @@
+import os
 
 FILE_NAME = '../DATA/mary.txt'
 
@@ -28,3 +29,5 @@ print('-' * 60)
 with open(FILE_NAME) as mary_in:
     lines_without_nl = mary_in.read().splitlines()  # splitlines() splits string on ' ' into lines
     print(lines_without_nl)
+
+
