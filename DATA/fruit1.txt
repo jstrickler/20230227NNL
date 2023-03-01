@@ -14,7 +14,7 @@ lemon
 grapefruit
 apple
 tangerine
-cantelope
+cantaloupe
 cherry
 apple
 apple

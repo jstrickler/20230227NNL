@@ -7,7 +7,7 @@ Lime
 grapefruit
 Tangerine
 pineapple
-Cantelope
+Cantaloupe
 honeydew
 grape
 Plum

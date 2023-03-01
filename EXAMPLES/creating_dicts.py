@@ -18,3 +18,10 @@ print(airports['LAX'])
 airports['SLC'] = 'Salt Lake City'  # assign to new key
 airports['LAX'] = 'Lost Angels'  # overwrite existing key
 print(airports['SLC'])
+
+c = {}
+c['a'] = 1   # cp['a'] += 1
+c['a'] += 1   # c['a'] = c['a'] + 1
+c['a'] += 1
+
+print(f"c: {c}")
