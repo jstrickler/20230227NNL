@@ -1,4 +1,15 @@
+"""
+General tools for searching text.
+
+search(search-term, file-list, ignore_case=False)
+"""
+
 def main():
+    """
+    Program entry point.
+
+    :return: None
+    """
     foods = search('bacon', 'DATA/breakfast.txt')
     print(f"foods: {foods}\n")
 
@@ -9,9 +20,12 @@ def main():
     print(f"birds: {birds}\n")
 
 
-def search(search_term, *file_paths, ignore_case=False):
+def search(search_term: str, *file_paths, ignore_case: bool=False):
     """
     Search one or more files for a search term.
+
+    part one
+    --------
 
     :param search_term: Search term
     :param file_paths: Iterable of file paths to search
@@ -30,4 +44,4 @@ def search(search_term, *file_paths, ignore_case=False):
                     matching_lines.append(line)
     return matching_lines
 
-main()
+# main()
