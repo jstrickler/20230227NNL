@@ -1,4 +1,3 @@
-
 import re
 
 s = """lorem ipsum M-302 dolor sit amet, consectetur r-99 adipiscing elit, sed do
@@ -7,19 +6,17 @@ ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
 ea commodo z-883  consequat. Duis aute irure dolor in reprehenderit in
 voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur. 
 Excepteur sint occaecat A-110 cupidatat non proident, sunt in H-332 culpa qui 
-officia deserunt Y-45 mollit anim id est dlaborum"""
+officia deserunt Y-45 mollit anim id est laborum"""
 
 rx_code = re.compile(r'(?P<letter>[A-Z])-(?P<number>\d{2,3})', re.I)
 
-def update_code(m):  # callback function is passed each match object
-    letter = m.group('letter').upper()
-    number = int(m.group('number'))
-#    return "WOMBAT"
-    return f'{letter}:{number:04d}'  # function returns replacement text
+s2 = rx_code.sub(r"[\2] {\1} //\g<0>//", s)
+print(f"s2: {s2}")
+print('-' * 60)
+s3 = rx_code.sub(r"\g<number>-\g<letter>", s)
+print(f"s3: {s3}")
 
-
-s2, count = rx_code.subn(update_code, s)  # sub takes callback function instead of replacement text
-print(s2)
-print(count, "replacements made")
-
-# r"\1 foo \2"
+# backreferences
+# \n group n     (not OK to have trailing digits, like \10)
+# \g<n> group n  (OK to have trailing digits, like \g<1>0
+# \g<spam>  named group "spam"

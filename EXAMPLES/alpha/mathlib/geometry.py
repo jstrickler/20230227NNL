@@ -11,6 +11,8 @@ import math   # load math.py
 
 PI = math.pi
 
+ANIMAL = "wombat"
+
 def circle_area(diameter):
     """
     Compute the area of a circle from a given diameter
@@ -39,3 +41,12 @@ def square_area(side):
     :return: Area of square
     """
     return side ** 2
+
+def _spam():
+    print("SPAM SPAM SPAM")
+
+print("my name is", __name__)
+
+if __name__ == '__main__':
+    print(f"circle_area(50): {circle_area(50)}")
+

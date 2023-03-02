@@ -11,6 +11,8 @@ officia deserunt Y-45 mollit anim id est laborum"""
 
 pattern = r'[A-Z]-\d{2,3}'
 
+rx_code = re.compile(pattern, re.I)
+
 if re.search(pattern, s, re.IGNORECASE):  # make search case-insensitive
     print("Found pattern.")
 print()

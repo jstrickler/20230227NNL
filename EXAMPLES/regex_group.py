@@ -11,9 +11,15 @@ officia deserunt Y-45 mollit anim id est laborum"""
 
 pattern = r'([A-Z])-(\d{2,3})'  # parens delimit groups
 
+m = re.search(pattern, s)
+print(m.group(1), m.group(2))
+print()
+
+print("              Group 1")
 print("Group         start  end")
-print("0      1  2")
+print("0      1    2")
 print("-" * 25)
+
 
 for m in re.finditer(pattern, s):
     #  (group 0 is entire match)

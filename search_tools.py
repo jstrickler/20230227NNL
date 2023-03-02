@@ -44,4 +44,5 @@ def search(search_term: str, *file_paths, ignore_case: bool=False):
                     matching_lines.append(line)
     return matching_lines
 
-# main()
+if __name__ == '__main__':
+    main()
