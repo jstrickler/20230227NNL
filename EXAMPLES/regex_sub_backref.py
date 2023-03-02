@@ -16,7 +16,7 @@ print('-' * 60)
 s3 = rx_code.sub(r"\g<number>-\g<letter>", s)
 print(f"s3: {s3}")
 
-# backreferences
-# \n group n     (not OK to have trailing digits, like \10)
-# \g<n> group n  (OK to have trailing digits, like \g<1>0
+# backreferences (in replacement text)
+# \n group n     (not OK to have trailing digits, like \10)  (\0 does not work for group 0)
+# \g<n> group n  (OK to have trailing digits, like \g<1>0)   (\g<0> DOES work for group 0)
 # \g<spam>  named group "spam"
