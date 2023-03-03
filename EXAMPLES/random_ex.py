@@ -1,4 +1,3 @@
-
 import random
 
 fruits = ["pomegranate", "cherry", "apricot", "date", "apple",

@@ -1,0 +1,7 @@
+import requests
+
+URL = "https://raleigh.craigslist.org/search/ata#search=1~gallery~0~0"
+
+web_page = requests.get(URL)
+
+print(web_page.text)
