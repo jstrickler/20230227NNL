@@ -3,22 +3,18 @@ General tools for searching text.
 
 search(search-term, file-list, ignore_case=False)
 """
+import sys
 
-def main():
+def main(args):
     """
     Program entry point.
 
     :return: None
     """
-    foods = search('bacon', 'DATA/breakfast.txt')
-    print(f"foods: {foods}\n")
-
-    potus = search(':virginia:', 'DATA/presidents.txt', ignore_case=True)
-    print(f"potus: {potus}\n")
-
-    birds = search('bird', 'DATA/alice.txt', 'DATA/parrot.txt', 'DATA/words.txt', ignore_case=True)
-    print(f"birds: {birds}\n")
-
+    search_term, *file_paths = args
+    results = search(search_term, *file_paths)
+    for result in results:
+        print(result)
 
 def search(search_term: str, *file_paths, ignore_case: bool=False):
     """
@@ -45,4 +41,4 @@ def search(search_term: str, *file_paths, ignore_case: bool=False):
     return matching_lines
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
